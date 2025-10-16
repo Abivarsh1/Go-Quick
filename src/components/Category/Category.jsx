@@ -1,3 +1,4 @@
+import SectionTitle from "../SectionTitle/SectionTitle"
 
 
 const Category = () => {
@@ -48,6 +49,14 @@ const Category = () => {
 
     return (
         <div className="lg:container mx-auto">
+
+            {/* {section title} */}
+            <div >
+            <SectionTitle title={'popular categories'}/>
+
+            </div>
+
+
             <div className="grid grid-cols-2">
 
 

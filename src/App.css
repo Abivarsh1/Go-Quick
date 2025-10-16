@@ -27,3 +27,31 @@ body {
     background-repeat: no-repeat;
 
 }
+
+
+/* about sliderr */
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 0px !important;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 8px !important;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-something: grayscale;
+    background-color: #e2e6ea !important;
+    border-radius: 1rem !important;
+    opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+    background-color: #05a845 !important;
+}
+

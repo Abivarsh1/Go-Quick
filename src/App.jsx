@@ -5,6 +5,7 @@ import './App.css'
 import { BrowserRouter, Route, Router, Routes } from 'react-router'
 import Home from './pages/Home/Home'
 import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -18,7 +19,9 @@ function App() {
 
         <Route path='/' element={<Home />} />
       </Routes>
+
       
+      <Footer />
       </BrowserRouter>
     </>
   )
