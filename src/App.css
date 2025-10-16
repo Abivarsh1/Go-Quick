@@ -19,6 +19,35 @@ body {
     font-family:"Inter", sans-serif ;
 }
 
+/* 
+header is sticky? */
+
+.header_component{
+    position: fixed;
+    top:0rem;
+    left:0rem;
+    width:100%;
+    height: auto;
+    z-index: 50;
+    background-color: white;
+}
+
+
+.header_component.is-sticky {
+    animation: scroll .7s ease-in;
+    border-bottom: 1px solid #05a845;
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateY(-110%);
+
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
 .banner_container {
     
     background-image: url('src/assets/banner/banner_bg.png');

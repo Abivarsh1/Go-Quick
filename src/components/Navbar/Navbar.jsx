@@ -3,11 +3,37 @@ import { CiHeart, CiSearch } from "react-icons/ci";
 import { RiMenuSearchLine } from "react-icons/ri";
 import { FaBars } from "react-icons/fa";
 import { LuShoppingCart, LuUser } from "react-icons/lu";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
 
+
+
+    const [sticky, setSticky]=useState('');
+
+    useEffect(()=> {
+
+        console.log('hollow just check it');    
+
+        window.addEventListener('scroll', isSticky);
+
+        // clear function
+
+        return () => {
+            window.removeEventListener('scroll', isSticky)
+        }
+
+
+    }, []);
+
+    const isSticky =()=> {
+        const scrollTop = window.scrollY;
+        const stickyClass = scrollTop >= 250 ? 'is-sticky' : '';
+        setSticky(stickyClass);
+    }
+
     return (
-        <div>
+        <div className={`header_component ${sticky}`}>
 
             {/* {navbar Top} */}
 
